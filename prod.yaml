@@ -1,0 +1,49 @@
+version: "2.4"
+
+services:
+  odoo:
+    extends:
+      file: common.yaml
+      service: odoo
+    restart: unless-stopped
+    env_file:
+      - .docker/odoo.env
+      - .docker/db-access.env
+    environment:
+      DOODBA_ENVIRONMENT: "${DOODBA_ENVIRONMENT-prod}"
+      INITIAL_LANG: "fr_FR"
+    depends_on:
+      - db
+    networks:
+      default:
+    labels:
+      doodba.domain.main: ""
+
+  db:
+    extends:
+      file: common.yaml
+      service: db
+    env_file:
+      - .docker/db-creation.env
+    restart: unless-stopped
+
+  backup:
+    extends:
+      file: common.yaml
+      service: backup
+    env_file:
+      - .docker/backup.env
+      - .docker/db-access.env
+    restart: unless-stopped
+    depends_on:
+      - db
+
+networks:
+  default:
+    driver_opts:
+      encrypted: 1
+
+volumes:
+  backup_cache:
+  filestore:
+  db:
