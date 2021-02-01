@@ -27,13 +27,14 @@ services:
       - public
     volumes:
       - ./odoo/custom/src:/opt/odoo/custom/src:rw,z
+      - ~/.ssh:/root/.ssh:ro
     environment:
       DEPTH_DEFAULT: 100
       # XXX Export these variables before running setup to own the files
       UID: "${UID:-1000}"
       GID: "${GID:-1000}"
       UMASK: "$UMASK"
-    user: root
+    user: "$UID:$GID"
     entrypoint: autoaggregate
 
 networks:

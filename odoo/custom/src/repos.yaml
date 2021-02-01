@@ -22,7 +22,7 @@
     # for a sane value of 100 commits)
     depth: $DEPTH_DEFAULT
   remotes:
-    enterprise: https://github.com/odoo/enterprise.git
+    enterprise: git@github.com:odoo/enterprise.git
   target: enterprise $ODOO_VERSION
   merges:
     - enterprise $ODOO_VERSION
