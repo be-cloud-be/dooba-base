@@ -1,2 +1,5 @@
 enterprise:
-  - "*" # All web addons
+  - "*" # All enterprise addons
+  
+documents_sync:
+  - "*" # All documents_sync addons
