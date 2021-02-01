@@ -36,7 +36,7 @@
     # for a sane value of 100 commits)
     depth: $DEPTH_DEFAULT
   remotes:
-    enterprise: git@github.com:be-cloud-be/documents_sync.git
+    documents_sync: git@github.com:be-cloud-be/documents_sync.git
   target: documents_sync $ODOO_VERSION
   merges:
     - documents_sync $ODOO_VERSION
