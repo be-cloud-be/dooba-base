@@ -15,7 +15,7 @@
     # Example of a merge of the PR with the number <PR>
     # - oca refs/pull/<PR>/head
 
-./enterprise
+./enterprise:
   defaults:
     # Shallow repositories ($DEPTH_DEFAULT=1) are faster & thinner
     # You may need a bigger depth when merging PRs (use $DEPTH_MERGE
