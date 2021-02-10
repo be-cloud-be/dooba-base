@@ -1,5 +1,14 @@
 enterprise:
   - "*" # All enterprise addons
   
-documents_sync:
-  - "*" # All documents_sync addons
+web:
+  - "*" # All web addons
+
+server-tools:
+  - "*" # All construction addons
+  
+hr:
+  - "*" # All construction addons
+  
+construction:
+  - "*" # All construction addons

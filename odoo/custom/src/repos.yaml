@@ -29,16 +29,58 @@
     # Example of a merge of the PR with the number <PR>
     # - oca refs/pull/<PR>/head
     
-./documents_sync:
+./construction:
   defaults:
     # Shallow repositories ($DEPTH_DEFAULT=1) are faster & thinner
     # You may need a bigger depth when merging PRs (use $DEPTH_MERGE
     # for a sane value of 100 commits)
     depth: $DEPTH_DEFAULT
   remotes:
-    documents_sync: git@github.com:be-cloud-be/documents_sync.git
-  target: documents_sync $ODOO_VERSION
+    construction: git@github.com:be-cloud-be/construction.git
+  target: construction $ODOO_VERSION
   merges:
-    - documents_sync $ODOO_VERSION
+    - construction $ODOO_VERSION
+    # Example of a merge of the PR with the number <PR>
+    # - oca refs/pull/<PR>/head
+    
+./web:
+  defaults:
+    # Shallow repositories ($DEPTH_DEFAULT=1) are faster & thinner
+    # You may need a bigger depth when merging PRs (use $DEPTH_MERGE
+    # for a sane value of 100 commits)
+    depth: $DEPTH_DEFAULT
+  remotes:
+    web: https://github.com/OCA/web.git
+  target: web $ODOO_VERSION
+  merges:
+    - web $ODOO_VERSION
+    # Example of a merge of the PR with the number <PR>
+    # - oca refs/pull/<PR>/head
+    
+./server-tools:
+  defaults:
+    # Shallow repositories ($DEPTH_DEFAULT=1) are faster & thinner
+    # You may need a bigger depth when merging PRs (use $DEPTH_MERGE
+    # for a sane value of 100 commits)
+    depth: $DEPTH_DEFAULT
+  remotes:
+    web: https://github.com/OCA/server-tools.git
+  target: server-tools $ODOO_VERSION
+  merges:
+    - server-tools $ODOO_VERSION
+    # Example of a merge of the PR with the number <PR>
+    # - oca refs/pull/<PR>/head
+    
+./hr:
+  defaults:
+    # Shallow repositories ($DEPTH_DEFAULT=1) are faster & thinner
+    # You may need a bigger depth when merging PRs (use $DEPTH_MERGE
+    # for a sane value of 100 commits)
+    depth: $DEPTH_DEFAULT
+  remotes:
+    web: https://github.com/OCA/hr.git
+  target: hr $ODOO_VERSION
+  merges:
+    - hr $ODOO_VERSION
     # Example of a merge of the PR with the number <PR>
     # - oca refs/pull/<PR>/head
