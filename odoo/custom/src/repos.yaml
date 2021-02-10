@@ -64,7 +64,7 @@
     # for a sane value of 100 commits)
     depth: $DEPTH_DEFAULT
   remotes:
-    web: https://github.com/OCA/server-tools.git
+    server-tools: https://github.com/OCA/server-tools.git
   target: server-tools $ODOO_VERSION
   merges:
     - server-tools $ODOO_VERSION
