@@ -78,7 +78,7 @@
     # for a sane value of 100 commits)
     depth: $DEPTH_DEFAULT
   remotes:
-    web: https://github.com/OCA/hr.git
+    hr: https://github.com/OCA/hr.git
   target: hr $ODOO_VERSION
   merges:
     - hr $ODOO_VERSION
