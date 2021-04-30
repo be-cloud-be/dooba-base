@@ -18,8 +18,7 @@ web:
   defaults:
     depth: $DEPTH_MERGE
   remotes:
-    origin: https://github.com/OCA/web.git
-    tecnativa: https://github.com/Tecnativa/partner-contact.git
+    web: https://github.com/OCA/web.git
   target: web $ODOO_VERSION
   merges:
     - web $ODOO_VERSION
