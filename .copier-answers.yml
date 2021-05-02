@@ -1,5 +1,5 @@
-# Changes here will be overwritten by Copier
-_commit: v2.6.1
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v2.7.1
 _src_path: gh:Tecnativa/doodba-copier-template
 backup_deletion: false
 backup_dst: gs://bucket/be-cloud/odoo/backup
@@ -7,8 +7,8 @@ backup_email_from: jerome.sonnet@be-cloud.be
 backup_email_to: jerome.sonnet@be-cloud.be
 backup_tz: UTC
 cidr_whitelist: null
-domains_prod: dev.be-cloud.be
-domains_test: test.be-cloud.be
+domains_prod: horizon.student-crlg.be
+domains_test: horizon-dev.student-crlg.be
 gitlab_url: null
 odoo_dbfilter: .*
 odoo_initial_lang: fr_FR
@@ -17,14 +17,14 @@ odoo_oci_image: null
 odoo_proxy: null
 odoo_version: 13.0
 paths_without_crawlers:
-- /web
-- /website/info
-postgres_dbname: prod
+  - /web
+  - /website/info
+postgres_dbname: horizon
 postgres_username: odoo
 postgres_version: 13
 project_author: be-cloud.be
 project_license: OEEL-1.0
-project_name: dooba-base
+project_name: horizon
 smtp_canonical_default: null
 smtp_canonical_domains: null
 smtp_default_from: jerome.sonnet@be-cloud.be

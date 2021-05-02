@@ -10,7 +10,7 @@ services:
         GID: "${GID:-1000}"
     environment:
       EMAIL_FROM: "jerome.sonnet@be-cloud.be"
-      PGDATABASE: &dbname prod
+      PGDATABASE: &dbname horizon
       PGUSER: &dbuser "odoo"
       DB_FILTER: ".*"
       PROXY_MODE: "false"
